@@ -9,18 +9,20 @@ A descoberta das fontes de dados foi feita através de uma análise detalhada do
 1. **Investigação do Dólar PTAX**:
    - Inicialmente acessei `https://www.bcb.gov.br/estabilidadefinanceira/fechamentodolar`
    - Ao analisar o HTML, descobri que a página principal usa um iframe
+   ![Página principal com iframe](/public/img1.png)
    - O iframe aponta para uma página mais simples: `https://ptax.bcb.gov.br/ptax_internet/consultarUltimaCotacaoDolar.do`
-   - ![Página principal com iframe](/public/img1.png)
+   ![Página do iframe sem proteções](/public/img2.png)
    - Esta página secundária não possui proteções contra web scraping
-   - ![Página do iframe sem proteções](/public/img2.png)
+   
 
 2. **Investigação do Euro PTAX**:
    - Acessei `https://www.bcb.gov.br/`
    - Analisei as requisições de rede do site
+   ![Requisições da API](/public/img3.png)
    - Descobri uma API pública: `https://www.bcb.gov.br/api/servico/sitebcb/indicadorCambio`
-   - ![Requisições da API](/public/img3.png)
+   ![Resposta da API](/public/img4.png)
    - A API retorna dados tanto do Dólar quanto do Euro PTAX
-   - ![Resposta da API](/public/img4.png)
+   
 
 ## Funcionalidades
 
