@@ -2,6 +2,26 @@
 
 Este script obtém as cotações PTAX do Dólar e Euro do Banco Central do Brasil (BACEN) através de múltiplas fontes.
 
+## Processo de Investigação
+
+A descoberta das fontes de dados foi feita através de uma análise detalhada dos sites do BACEN:
+
+1. **Investigação do Dólar PTAX**:
+   - Inicialmente acessei `https://www.bcb.gov.br/estabilidadefinanceira/fechamentodolar`
+   - Ao analisar o HTML, descobri que a página principal usa um iframe
+   - O iframe aponta para uma página mais simples: `https://ptax.bcb.gov.br/ptax_internet/consultarUltimaCotacaoDolar.do`
+   - ![Página principal com iframe](/public/img1.png)
+   - Esta página secundária não possui proteções contra web scraping
+   - ![Página do iframe sem proteções](/public/img2.png)
+
+2. **Investigação do Euro PTAX**:
+   - Acessei `https://www.bcb.gov.br/`
+   - Analisei as requisições de rede do site
+   - Descobri uma API pública: `https://www.bcb.gov.br/api/servico/sitebcb/indicadorCambio`
+   - ![Requisições da API](/public/img3.png)
+   - A API retorna dados tanto do Dólar quanto do Euro PTAX
+   - ![Resposta da API](/public/img4.png)
+
 ## Funcionalidades
 
 - Obtém a cotação PTAX do Dólar de duas fontes diferentes:
