@@ -9,7 +9,7 @@ A descoberta das fontes de dados foi feita através de uma análise detalhada do
 1. **Investigação do Dólar PTAX**:
    - Inicialmente acessei `https://www.bcb.gov.br/estabilidadefinanceira/fechamentodolar`
    - Ao analisar o HTML, descobri que a página principal usa um iframe
-   ![Página principal com iframe](/public/img1.png)
+   - ![Página principal com iframe](/public/img1.png)
    - O iframe aponta para uma página mais simples: `https://ptax.bcb.gov.br/ptax_internet/consultarUltimaCotacaoDolar.do`
    ![Página do iframe sem proteções](/public/img2.png)
    - Esta página secundária não possui proteções contra web scraping
@@ -93,14 +93,6 @@ O arquivo CSV gerado contém as seguintes colunas:
 - A API do BACEN fornece dados tanto para o Dólar quanto para o Euro PTAX
 - Os dados são filtrados para incluir apenas cotações do tipo "Fechamento"
 - O script verifica a consistência dos dados obtidos das diferentes fontes
-
-## Soluções implementadas
-
-1. **Anti-detecção**: Técnicas para evitar bloqueio do site
-2. **Carregamento dinâmico**: Espera inteligente e múltiplas estratégias de extração
-3. **Múltiplas fontes**: Garantia de extração de todas as fontes requeridas
-4. **Robustez**: Tratamento de exceções e sistema de fallback para dados hardcoded
-
 ## Manutenção
 
 Em caso de mudanças nos sites, pode ser necessário atualizar:
