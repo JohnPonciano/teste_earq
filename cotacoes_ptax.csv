@@ -1,0 +1,4 @@
+date,currency,buy_rate,sell_rate,source
+11/04/2025,USD,5.8731,5.8737,https://ptax.bcb.gov.br/ptax_internet/consultarUltimaCotacaoDolar.do
+11/04/2025,USD,5.8731,5.8737,https://www.bcb.gov.br/api/servico/sitebcb/indicadorCambio
+11/04/2025,EUR,6.6495,6.6508,https://www.bcb.gov.br/api/servico/sitebcb/indicadorCambio
